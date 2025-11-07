@@ -2,6 +2,7 @@ const cars = [
     {
         model: "ВАЗ-2101",
         year: 1970,
+        from_to: "1970 по 1988",
         characteristics: "Двигатель 1.2L, 62 л.с., 4-ступ. МКПП",
         sales: 4800000,
         image: "vaz-2101.jpg"
@@ -9,6 +10,7 @@ const cars = [
     {
         model: "ВАЗ-2106",
         year: 1976,
+        from_to: "1976 по 2006",
         characteristics: "Двигатель 1.6L, 75 л.с., 4-ступ. МКПП",
         sales: 4300000,
         image: "vaz-2106.jpg"
@@ -16,6 +18,7 @@ const cars = [
     {
         model: "ВАЗ-2109",
         year: 1987,
+        from_to: "1987 по 2004",
         characteristics: "Двигатель 1.3L, 64 л.с., 5-ступ. МКПП",
         sales: 3400000,
         image: "vaz-2109.jpg"
@@ -23,6 +26,7 @@ const cars = [
     {
         model: "ВАЗ-2110",
         year: 1995,
+        from_to: "1996 по 2015",
         characteristics: "Двигатель 1.5L, 79 л.с., 5-ступ. МКПП",
         sales: 2900000,
         image: "vaz-2110.jpg"
@@ -30,6 +34,7 @@ const cars = [
     {
         model: "ВАЗ-2114",
         year: 2001,
+        from_to: "2003 по 2013",
         characteristics: "Двигатель 1.6L, 81 л.с., 5-ступ. МКПП",
         sales: 2100000,
         image: "vaz-2114.jpg"
@@ -37,6 +42,7 @@ const cars = [
     {
         model: "ВАЗ-2115",
         year: 1997,
+        from_to: "1997 по 2012",
         characteristics: "Двигатель 1.5L, 77 л.с., 5-ступ. МКПП",
         sales: 1800000,
         image: "vaz-2115.jpg"
@@ -44,6 +50,7 @@ const cars = [
     {
         model: "Lada Granta",
         year: 2011,
+        from_to: "2011 по ???",
         characteristics: "Двигатель 1.6L, 87-106 л.с., 5-ступ. МКПП/АКПП",
         sales: 1500000,
         image: "lada-granta.jpg"
@@ -51,6 +58,7 @@ const cars = [
     {
         model: "Lada Vesta",
         year: 2015,
+        from_to: "2015 по ???",
         characteristics: "Двигатель 1.6L-1.8L, 106-122 л.с., 5-ступ. МКПП/ВАРИАТОР",
         sales: 900000,
         image: "lada-vesta.png"
@@ -58,6 +66,7 @@ const cars = [
     {
         model: "Lada Largus",
         year: 2012,
+        from_to: "2012 по 2022",
         characteristics: "Двигатель 1.6L, 84-106 л.с., 5-ступ. МКПП",
         sales: 600000,
         image: "lada-largus.png"
@@ -65,6 +74,7 @@ const cars = [
     {
         model: "Lada Niva",
         year: 1977,
+        from_to: "1997 по ???",
         characteristics: "Двигатель 1.7L, 80 л.с., 5-ступ. МКПП, полный привод",
         sales: 2500000,
         image: "lada-niva.jpg"
@@ -100,7 +110,10 @@ function loadCarInfo() {
                 <div class="car-details">
                     <h3>${car.model}</h3>
                     <div class="info-row">
-                        <strong>Год выпуска:</strong> ${car.year}
+                        <strong>Начало производства</strong> ${car.year}
+                    </div>
+                    <div class="info-row">
+                        <strong>Годы выпуска</strong> ${car.from_to}
                     </div>
                     <div class="info-row">
                         <strong>Характеристики:</strong> ${car.characteristics}
@@ -120,7 +133,7 @@ function goBack() {
     window.location.href = 'index.html';
 }
 
-// Загружаем информацию об автомобиле при загрузке страницы car.html
+
 if (window.location.pathname.includes('car.html')) {
     window.onload = loadCarInfo;
 }
