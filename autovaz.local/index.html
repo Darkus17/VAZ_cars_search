@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск автомобилей ВАЗ</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="gradient-text">Поиск автомобилей ВАЗ</h1>
+        
+        <div class="search-section">
+            <input type="text" id="carName" placeholder="Введите модель ВАЗ" 
+                   onkeypress="if(event.key === 'Enter') searchCar()">
+            <button onclick="searchCar()"> Найти </button>
+        </div>
+        
+        
+        
+        <div class="author-section">
+            <button onclick="showAuthor()">Об авторе</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
